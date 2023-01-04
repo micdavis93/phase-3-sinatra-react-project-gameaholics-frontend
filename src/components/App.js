@@ -4,10 +4,10 @@ import { Route, Switch } from "react-router-dom";
 import Header from "./Header"
 import Footer from "./Footer"
 
-import Home from "./children/Home"
-import Games from "./children/Games"
-import Gamers from "./children/Gamers"
-import Reviews from "./children/Reviews"
+import HomePage from "./HomePage"
+import GamesPage from "./games/GamesPage"
+import GamersPage from "./gamers/GamersPage"
+import ReviewsPage from "./reviews/ReviewsPage"
 
 
 export default function App() {
@@ -17,19 +17,19 @@ export default function App() {
 
       <Switch>
         <Route path="/games">
-          <Games />
+          <GamesPage />
         </Route>
 
         <Route path="/gamers">
-          <Gamers />
+          <GamersPage />
         </Route>
 
         <Route path="/reviews">
-          <Reviews />
+          <ReviewsPage />
         </Route>
 
         <Route path="/">
-          <Home />
+          <HomePage />
         </Route>
       </Switch>
 

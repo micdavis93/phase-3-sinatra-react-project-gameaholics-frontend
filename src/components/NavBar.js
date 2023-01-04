@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <Menu pointing horizontal style={{width: "307px", margin: "auto", textAlign: "center"}}>
       <Menu.Item> 
-        <NavLink to="/">
+        <NavLink exact to="/">
           Home
         </NavLink>
       </Menu.Item>  

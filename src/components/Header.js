@@ -6,8 +6,9 @@ export default function Header() {
 
   return (
     <>
-      <h1>Game-A-Holics Header</h1>
+      <h1 className="press-start">Game-A-Holics</h1>
       <NavBar />
+      <hr></hr>
     </>
   )
 }

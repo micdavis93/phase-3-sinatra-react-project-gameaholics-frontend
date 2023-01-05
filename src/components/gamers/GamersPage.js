@@ -1,6 +1,6 @@
 import GamersSearch from "./children/GamersSearch"
 import GamersAll from "./children/GamersAll"
-import AddNew from "../AddNew"
+import AddNew from "../addnew/AddNew"
 
 
 export default function GamersPage() {

@@ -1,14 +1,17 @@
+import { Card } from "semantic-ui-react";
+
+import GameCard from "./GameCard"
 
 
+export default function GamesAll({games}) {
 
-export default function GamesAll() {
-
-
+  const mappedGames = games.map(game => {
+    return <GameCard key={game.id} game={game} />
+  })
 
   return (
-    <div>
-      <h3>This is a collection of all the games.</h3>
-      
-    </div>
+    <Card.Group itemsPerRow={3} >
+      {mappedGames}
+    </Card.Group>
   )
 }

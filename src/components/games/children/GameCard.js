@@ -1,14 +1,21 @@
+import { Link } from "react-router-dom"
+import { Card } from "semantic-ui-react"
 
 
+export default function GameCard({game}) {
 
-export default function GameCard() {
-
-
+  const {id, title, genre, platform, image, description, year, developer, price} = game
 
   return (
-    <div>
-      <h2>This one game card.</h2>
+    <Card 
+      image={image}
+      header={title}
+      meta={`${developer} | ${genre} | ${platform}`}
+      meta={`MSRP: $${price} | Released in ${year}`}
       
-    </div>
+      description={description}
+
+      extra={<Link to={`/games/${id}`}>More Information</Link>}
+    />
   )
 }

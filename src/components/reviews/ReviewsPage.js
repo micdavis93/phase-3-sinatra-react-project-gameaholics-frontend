@@ -1,6 +1,6 @@
 import ReviewsSearch from "./children/ReviewsSearch"
 import ReviewsAll from "./children/ReviewsAll"
-import AddNew from "../AddNew"
+import AddNew from "../addnew/AddNew"
 
 
 export default function ReviewsPage() {

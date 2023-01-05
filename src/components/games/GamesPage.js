@@ -1,17 +1,41 @@
+import { useEffect, useState } from "react"
+
 import GamesSearch from "./children/GamesSearch"
 import GamesAll from "./children/GamesAll"
-import AddNew from "../AddNew"
+import AddNew from "../addnew/AddNew"
 
 
 export default function GamesPage() {
 
+  const [games, setGames] = useState([])
+  const [searchQuery, setSearchQuery] = useState("")
 
+  useEffect(() => {
+    fetch("http://localhost:9292/games")
+    .then(r => r.json())
+    .then(gamesData => {
+      setGames(gamesData)
+    })
+  }, [])
+
+  console.log(games)
+
+  const filteredGames = games.filter(game => {
+    return (
+      game.title.toString().toLowerCase().includes(searchQuery.toString().toLowerCase())
+      // || game.genre.toString().toLowerCase().includes(searchQuery.toString().toLowerCase())
+      // || game.platform.toString().toLowerCase().includes(searchQuery.toString().toLowerCase())
+      // || game.year.toString().toLowerCase().includes(searchQuery.toString().toLowerCase())
+      // || game.developer.toString().toLowerCase().includes(searchQuery.toString().toLowerCase())
+      // || game.price.toString().toLowerCase().includes(searchQuery.toString().toLowerCase())
+    )
+  })
 
   return (
     <div>
       <h2>These are all the games.</h2>
-      <GamesSearch />
-      <GamesAll />
+      <GamesSearch searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <GamesAll games={filteredGames} />
       <AddNew />
     </div>
   )

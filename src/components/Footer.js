@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <>
       <hr></hr>
-      <h1>Game-A-Holics Footer</h1>
+      <h1 className="press-start">Game-A-Holics</h1>
       <NavBar />
     </>
   )

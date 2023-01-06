@@ -14,7 +14,7 @@ export default function GamersSearch({searchQuery, setSearchQuery}) {
       <input
         type="text"
         id="search"
-        placeholder="Search for your favorite game..."
+        placeholder="Search for your favorite gamer..."
         value={searchQuery}
         onChange={(e) => handleChange(e)}
         style={{width: "300px"}}

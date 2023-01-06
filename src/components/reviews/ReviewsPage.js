@@ -31,7 +31,7 @@ export default function ReviewsPage() {
 
   return (
     <div>
-      <h2>These are all the reviews.</h2>
+      <h1>🍆 Reviews Hub 🍆</h1>
       <ReviewsSearch searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <ReviewsAll reviews={filteredReviews} />
       <AddNew />

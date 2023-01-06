@@ -1,11 +1,16 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family:"Roboto", "Sans Serif", "Arial";
+  background-color: lightgray;
 }
 
 code {
@@ -16,4 +21,63 @@ code {
 .press-start {
   font-family: "Press Start 2P", "Arial";
   padding: 30px;
+}
+
+.press-start {
+  font-family: "Press Start 2P", "Arial";
+  padding: 30px;
+}
+
+.banger {
+  font-family: "Bangers"; 
+}
+
+.permanent-marker {
+  font-family: "Permanent Marker";
+}
+
+h1, h2 {
+  font-family: "Permanent Marker";
+}
+
+input {
+  /* width: 100%; */
+  display: flexbox;
+  padding: 15px;
+  background-color: white;
+  border-radius: 30px;
+  border: 2px solid black;
+  color: #111;
+  font-size: 7px;
+  box-shadow: 3px 1px 0px 2px, 0px -1px 0px 2px rgba(0, 0, 0, 0.62);
+  height: 30px;  
+  width: 150px;  
+  font-family: 'Knewave', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  &:focus,
+  &:valid{
+    outline: none;
+    ~ ul li{
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}){
+          &::before{
+            filter: blur(20px);
+            transform: translate(0, -35px) rotate(-210deg);
+          }
+          &::after{
+            filter: blur(0);
+            transform: scale(1) rotate(0);
+          }
+        }
+      }
+      @for $i from 1 through 6{
+        &:nth-child(#{$i}){
+          &::after{
+            transition-delay: 200ms + ($i * 200ms);
+          }
+        }
+      }
+    }
+  }
 }

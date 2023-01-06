@@ -33,7 +33,7 @@ export default function GamesPage() {
 
   return (
     <div>
-      <h2>These are all the games.</h2>
+      <h1>🍆 GAME HUB 🍆</h1>
       <GamesSearch searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <GamesAll games={filteredGames} />
       <AddNew />

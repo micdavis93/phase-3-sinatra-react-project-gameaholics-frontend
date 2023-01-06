@@ -31,7 +31,7 @@ export default function GamersPage() {
 
   return (
     <div>
-      <h2>These are all the gamers.</h2>
+      <h1>🍆 GAMERS HUB 🍆</h1>
       <GamersSearch searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <GamersAll gamers={filteredGamers} />
       <AddNew />

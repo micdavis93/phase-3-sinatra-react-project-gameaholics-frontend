@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 
 export default function AddNew() {
@@ -7,7 +7,9 @@ export default function AddNew() {
 
   return (
     <div>
-      <span>ADD NEW: <a>Game</a> | <a>Gamer</a> | <a>Review</a></span>
+      <hr></hr>
+      <span>ADD NEW: <Link to={`/games/addnew`}>Game</Link> | <Link to={`/gamers/addnew`}>Gamer</Link> | <Link to={`/reviews/addnew`}>Review</Link>
+      </span>
     </div>
   )
 }

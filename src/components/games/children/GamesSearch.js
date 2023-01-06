@@ -10,15 +10,15 @@ export default function GamesSearch({searchQuery, setSearchQuery}) {
 
   return (
     <div style={{padding: "10px"}}>
-        <label htmlFor="search">Search:  </label>
-        <input
-          type="text"
-          id="search"
-          placeholder="Search for your favorite game..."
-          value={searchQuery}
-          onChange={(e) => handleChange(e)}
-          style={{width: "300px"}}
-        />
+      <label htmlFor="search">Search:  </label>
+      <input
+        type="text"
+        id="search"
+        placeholder="Search for your favorite game..."
+        value={searchQuery}
+        onChange={(e) => handleChange(e)}
+        style={{width: "300px"}}
+      />
     </div>
   )
 }

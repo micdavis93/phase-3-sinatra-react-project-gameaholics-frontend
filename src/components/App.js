@@ -25,11 +25,9 @@ export default function App() {
         <Route path="/games/addnew">
           <NewGame />
         </Route>
-
         <Route path="/games/:id">
           <GamePage />
         </Route>
-
         <Route path="/games">
           <GamesPage />
         </Route>
@@ -38,11 +36,9 @@ export default function App() {
         <Route path="/gamers/addnew">
           <NewGamer />
         </Route>
-
         <Route path="/gamers/:id">
           <GamerPage />
         </Route>
-        
         <Route path="/gamers">
           <GamersPage />
         </Route>
@@ -51,11 +47,9 @@ export default function App() {
         <Route path="/reviews/addnew">
           <NewReview />
         </Route>
-
         <Route path="/reviews/:id">
           <ReviewPage />
         </Route>
-
         <Route path="/reviews">
           <ReviewsPage />
         </Route>

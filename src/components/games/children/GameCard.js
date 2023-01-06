@@ -10,10 +10,9 @@ export default function GameCard({game}) {
     <Card 
       image={image}
       header={title}
-      meta={`${developer} | ${genre} | ${platform}`}
-      meta={`MSRP: $${price} | Released in ${year}`}
+      meta={`${developer} | ${genre} | ${platform} | MSRP: $${price} | Released in ${year}`}
       
-      description={description}
+      description={`${description.substring(0,300)}...`}
 
       extra={<Link to={`/games/${id}`}>More Information</Link>}
     />

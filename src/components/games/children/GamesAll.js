@@ -1,5 +1,4 @@
 import { Card } from "semantic-ui-react";
-
 import GameCard from "./GameCard"
 
 

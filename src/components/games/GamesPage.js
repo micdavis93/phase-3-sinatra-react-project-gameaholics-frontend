@@ -22,12 +22,12 @@ export default function GamesPage() {
 
   const filteredGames = games.filter(game => {
     return (
-      game.title.toString().toLowerCase().includes(searchQuery.toString().toLowerCase())
-      // || game.genre.toString().toLowerCase().includes(searchQuery.toString().toLowerCase())
-      // || game.platform.toString().toLowerCase().includes(searchQuery.toString().toLowerCase())
-      // || game.year.toString().toLowerCase().includes(searchQuery.toString().toLowerCase())
-      // || game.developer.toString().toLowerCase().includes(searchQuery.toString().toLowerCase())
-      // || game.price.toString().toLowerCase().includes(searchQuery.toString().toLowerCase())
+      game.title.toString().toLowerCase().includes(searchQuery.toLowerCase())
+      || game.genre.toString().toLowerCase().includes(searchQuery.toLowerCase())
+      || game.platform.toString().toLowerCase().includes(searchQuery.toLowerCase())
+      || Number(game.year).toString().includes(searchQuery)
+      || game.developer.toString().toLowerCase().includes(searchQuery.toLowerCase())
+      || Number(game.price).toString().includes(searchQuery)
     )
   })
 

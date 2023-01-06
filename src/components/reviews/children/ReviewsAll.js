@@ -1,14 +1,16 @@
+import { Item } from 'semantic-ui-react'
+import ReviewCard from "../children/ReviewCard"
 
 
+export default function ReviewsAll({reviews}) {
 
-export default function ReviewsAll() {
-
-
+  const mappedReviews = reviews.map(review => {
+    return <ReviewCard key={review.id} review={review} />
+  })
 
   return (
-    <div>
-      <h3>This is a collection of all the reviews.</h3>
-      
-    </div>
+    <Item.Group >
+      {mappedReviews}
+    </Item.Group>
   )
 }

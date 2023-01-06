@@ -1,14 +1,20 @@
+import { Link } from "react-router-dom"
+import { Card } from "semantic-ui-react"
 
 
+export default function gamerCard({gamer}) {
 
-export default function GamerCard() {
-
-
+  const {id, name, age, origin, gender, bio, image} = gamer
 
   return (
-    <div>
-      <h2>This one gamer card.</h2>
+    <Card 
+      image={image}
+      header={name}
+      meta={`${age} | ${gender} | ${origin}`}
       
-    </div>
+      description={`${bio.substring(0,300)}...`}
+
+      extra={<Link to={`/gamers/${id}`}>More Information</Link>}
+    />
   )
 }

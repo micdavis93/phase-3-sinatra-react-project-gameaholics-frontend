@@ -107,7 +107,7 @@ export default function NewReview() {
           </select>
 
           <label><strong> Review Title: </strong></label>
-          <input type="text" name="title" placeholder="Enter Gamer Name..." onChange={handleFormValues} />
+          <input type="text" name="title" placeholder="Enter Review Title..." onChange={handleFormValues} />
         </div>
 
         <div className="inline fields">
